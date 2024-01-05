@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+ul {
+  font-family: "Baloo 2", cursive;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+#description a {
+  color: red;
+}
+
+#description {
+  background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#about {
+  font-family: "Manrope", sans-serif;
+}
+
+ul li:hover {
+  font-size: 1.1rem;
+  color: #ff79c6;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: white blue;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 121, 198, 0.2);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 14px;
+}

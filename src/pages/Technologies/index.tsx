@@ -117,7 +117,7 @@ export function Technologies() {
             </div>
           </div>
 
-          <div className="p-4 pt-12 text-lg text-white/50">
+          <div id="technologies" className="p-4 pt-12 text-lg text-white/50">
             {hoveredTech !== null ? (
               <p>{hoveredTech}</p>
             ) : (

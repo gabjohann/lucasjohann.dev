@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 import { DefaultLayout } from './layouts/DefaultLayout'
 import { Home } from './pages/Home'
 import { Projects } from './pages/Projects'
@@ -7,7 +7,7 @@ import { Technologies } from './pages/Technologies'
 import { About } from './pages/About'
 import { Experience } from './pages/Experience'
 
-export function Router() {
+/* export function Router() {
   return (
     <Routes>
       <Route path="/" element={<DefaultLayout />}>
@@ -20,4 +20,37 @@ export function Router() {
       </Route>
     </Routes>
   )
-}
+} */
+
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <DefaultLayout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/projetos',
+        element: <Projects />,
+      },
+      {
+        path: '/artigos',
+        element: <Articles />,
+      },
+      {
+        path: '/tecnologias',
+        element: <Technologies />,
+      },
+      {
+        path: '/experiencias',
+        element: <Experience />,
+      },
+      {
+        path: '/sobre',
+        element: <About />,
+      },
+    ],
+  },
+])

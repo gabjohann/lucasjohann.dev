@@ -1,3 +1,7 @@
+import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { LightBulbIcon } from '@heroicons/react/24/outline'
+
 import html from '../../assets/icons/html.svg'
 import css from '../../assets/icons/css.svg'
 import javascript from '../../assets/icons/javascript.svg'
@@ -11,10 +15,6 @@ import storybook from '../../assets/icons/storybook.svg'
 import shadcnUI from '../../assets/icons/shadcnui.svg'
 import docker from '../../assets/icons/docker.svg'
 import mysql from '../../assets/icons/mysql.svg'
-
-import { LightBulbIcon } from '@heroicons/react/24/outline'
-
-import { useState } from 'react'
 
 interface TechnologiesCardProps {
   imgSrc: string
@@ -93,38 +93,42 @@ export function Technologies() {
   const [hoveredTech, setHoveredTech] = useState<string | null>(null)
 
   return (
-    <main className="flex flex-grow flex-col items-center px-12">
-      <div className="flex items-center justify-center text-3xl text-white">
-        <h1>Tecnologias</h1>
-      </div>
+    <>
+      <Helmet title="Tecnologias" />
 
-      <div className="mt-10 grid grid-cols-2 justify-items-end gap-20">
-        <div className="w-max p-4">
-          <div className="grid cursor-pointer grid-cols-3 gap-8 gap-y-6 pt-8">
-            {technologies.map((technology) => (
-              <div
-                key={technology.imgSrc}
-                className="hover:blur-xs flex w-[76px] items-center rounded-md bg-gray-700 px-2 py-2 hover:scale-110"
-                onMouseEnter={() => setHoveredTech(technology.description)}
-                onMouseLeave={() => setHoveredTech(null)}
-              >
-                <img src={technology.imgSrc} alt="" width={60} />
+      <main className="flex flex-grow flex-col items-center px-12">
+        <div className="flex items-center justify-center text-3xl text-white">
+          <h1>Tecnologias</h1>
+        </div>
+
+        <div className="mt-10 grid grid-cols-2 justify-items-end gap-20">
+          <div className="w-max p-4">
+            <div className="grid cursor-pointer grid-cols-3 gap-8 gap-y-6 pt-8">
+              {technologies.map((technology) => (
+                <div
+                  key={technology.imgSrc}
+                  className="hover:blur-xs flex w-[76px] items-center rounded-md bg-gray-700 px-2 py-2 hover:scale-110"
+                  onMouseEnter={() => setHoveredTech(technology.description)}
+                  onMouseLeave={() => setHoveredTech(null)}
+                >
+                  <img src={technology.imgSrc} alt="" width={60} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="p-4 pt-12 text-lg text-white/50">
+            {hoveredTech !== null ? (
+              <p>{hoveredTech}</p>
+            ) : (
+              <div className="flex items-center gap-2">
+                <LightBulbIcon className="h-7 w-7 text-amber-300" />
+                <p>Passe o cursor sobre o card para saber mais!</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
-
-        <div className="p-4 pt-12 text-lg text-white/50">
-          {hoveredTech !== null ? (
-            <p>{hoveredTech}</p>
-          ) : (
-            <div className="flex items-center gap-2">
-              <LightBulbIcon className="h-7 w-7 text-amber-300" />
-              <p>Passe o cursor sobre o card para saber mais!</p>
-            </div>
-          )}
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }

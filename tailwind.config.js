@@ -22,12 +22,15 @@ module.exports = {
         roboto: ['Roboto', 'sans-serif'],
         manrope: ['Manrope', 'sans-serif'],
       },
+
       backgroundImage: {
-        noise: "url('./src/assets/bg-noise.png')",
+        noise: "url('./src/assets/bg-noise.webp')",
       },
+
       colors: {
         draculaPink: '#FF79C6',
       },
+
       height: {
         120: '30rem',
       },
@@ -42,6 +45,7 @@ module.exports = {
           to: { height: '0' },
         },
       },
+
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',

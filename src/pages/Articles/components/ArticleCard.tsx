@@ -1,4 +1,4 @@
-import firstFlutterProject from '../../../assets/article-cover/first-flutter-project.png'
+import firstFlutterProject from '../../../assets/article-cover/first-flutter-project.webp'
 
 interface ArticleCardProps {
   imgSrc: string

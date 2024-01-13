@@ -24,7 +24,7 @@ module.exports = {
       },
 
       backgroundImage: {
-        noise: "url('./public/bg-noise.webp')",
+        noise: "url('./public/bg-noise.png')",
       },
 
       colors: {

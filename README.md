@@ -36,4 +36,8 @@ __Sobre__: uma breve apresentação sobre a minha pessoa;
 
 ---
 
-<footer align="center">Feito com 💜 by Lucas</footer>
+<br />
+
+<footer>
+  <p align="center">Feito com 💜 by Lucas</p>
+</footer>

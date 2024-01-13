@@ -1,7 +1,8 @@
 import { Helmet } from 'react-helmet-async'
 import { formatDistanceToNow } from 'date-fns'
 
-import profileImage from '../../assets/profile.jpg'
+// import profileImage from '../../assets/profile.jpg'
+import profileImage from '../../assets/profile.webp'
 
 export function About() {
   const currentDate = formatDistanceToNow(new Date(2002, 3, 19))

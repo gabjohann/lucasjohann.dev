@@ -5,7 +5,7 @@ export function Header() {
 
   return (
     <header className="flex items-center justify-between px-24 py-7">
-      <a href="/" className="font-baloo text-lg text-white/60" id="description">
+      <a href="/" className="font-baloo text-lg text-white/60" id="logo">
         &lt;johann_dev/&gt;
       </a>
 

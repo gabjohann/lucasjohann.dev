@@ -11,14 +11,11 @@ ul {
   font-family: "Baloo 2", cursive;
 }
 
-p {
+#technologies {
   font-family: "Roboto", sans-serif;
 }
 
-#description a {
-  color: red;
-}
-
+#logo,
 #description {
   background: linear-gradient(180deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
   background-clip: text;
@@ -31,7 +28,7 @@ p {
 }
 
 ul li:hover {
-  font-size: 1.1rem;
+  font-weight: bold;
   color: #ff79c6;
 }
 

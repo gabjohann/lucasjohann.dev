@@ -98,9 +98,9 @@ export function Technologies() {
         <h1>Tecnologias</h1>
       </div>
 
-      <div className="mt-10 grid grid-cols-2 justify-items-end gap-20">
+      <div className="grid grid-cols-2 justify-items-end gap-20">
         <div className="w-max p-4">
-          <div className="grid cursor-pointer grid-cols-3 gap-8 gap-y-6 pt-8">
+          <div className="grid cursor-pointer grid-cols-4 gap-8 gap-y-6 pt-8">
             {technologies.map((technology) => (
               <div
                 key={technology.imgSrc}

@@ -28,7 +28,7 @@ ul {
 }
 
 ul li:hover {
-  font-size: 1.1rem;
+  font-weight: bold;
   color: #ff79c6;
 }
 

@@ -1,16 +1,13 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
+import { NavLinks } from './navLinks'
+import { MinNavLinks } from './minNavLinks'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const menuItems = [
-    { title: 'Projetos', link: '' },
-    { title: 'Tecnologias', link: '' },
-    { title: 'Artigos', link: '' },
-    { title: 'Experiências', link: '' },
-    { title: 'Sobre', link: '' },
-  ]
+  const currentRoute = useLocation()
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen)
@@ -30,9 +27,7 @@ export function Header() {
         </a>
 
         <ul className="hidden items-center space-x-5 md:flex">
-          <li>About</li>
-          <li>Contact</li>
-          <li>Help</li>
+          {currentRoute.pathname !== '/' ? <NavLinks /> : <MinNavLinks />}
         </ul>
 
         {/* Hamburger menu */}
@@ -53,16 +48,7 @@ export function Header() {
             isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
           }`}
         >
-          {menuItems.map(({ title, link }, index) => (
-            <li key={index} className="py-4 text-left">
-              <a
-                href={link}
-                className="block rounded-md px-10 text-lg text-white hover:font-semibold hover:text-purple-300"
-              >
-                {title}
-              </a>
-            </li>
-          ))}
+          {currentRoute.pathname !== '/' ? <NavLinks /> : <MinNavLinks />}
         </ul>
       </div>
     </header>

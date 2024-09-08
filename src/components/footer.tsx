@@ -45,7 +45,7 @@ export function Footer() {
       <ul className="flex items-center justify-center gap-10 py-5">
         <li>
           <button
-            className={`focus:shadow-outline flex items-center gap-2 focus:outline-none ${
+            className={`focus:shadow-outline flex items-center gap-2 hover:font-semibold hover:text-purple-300 focus:outline-none ${
               isClicked
                 ? 'animate-bounce text-purple-300'
                 : 'transition duration-300'

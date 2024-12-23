@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { useLocation } from 'react-router-dom'
 import { NavLinks } from './navLinks'
@@ -6,6 +6,7 @@ import { MinNavLinks } from './minNavLinks'
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   const currentRoute = useLocation()
 
@@ -13,8 +14,21 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <header className="relative w-screen">
+    <header
+      className={`fixed w-full transition-colors duration-300 ${isScrolled ? 'bg-black' : 'bg-transparent'}`}
+    >
       {/* Overlay */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-10 bg-black/20 backdrop-blur-sm" />
@@ -44,7 +58,7 @@ export function Header() {
 
         {/* Menu items */}
         <ul
-          className={`absolute right-0 top-0 z-20 flex w-3/6 flex-col items-start rounded-bl-md border-b-2 border-l-2 border-white/15 bg-zinc-950/70 pb-2 pt-12 duration-150 ${
+          className={`absolute right-0 top-0 z-20 flex w-3/6 flex-col items-start gap-2 rounded-bl-md border-b-2 border-l-2 border-white/15 bg-zinc-950/70 pb-3 pl-10 pt-16 duration-150 ${
             isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
           }`}
         >

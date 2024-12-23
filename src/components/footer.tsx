@@ -42,7 +42,7 @@ export function Footer() {
 
   return (
     <footer className="py-2 text-center text-white">
-      <ul className="flex items-center justify-center gap-10 py-5">
+      <ul className="flex items-center justify-center gap-3 py-5 text-sm md:gap-10 md:text-base">
         <li>
           <button
             className={`focus:shadow-outline flex items-center gap-2 hover:font-semibold hover:text-purple-300 focus:outline-none ${

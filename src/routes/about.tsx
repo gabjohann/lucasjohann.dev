@@ -1,24 +1,19 @@
-import { formatDistanceToNow } from 'date-fns'
-import profileImage from '../assets/profile.webp'
-
+import { formatDistanceToNow } from "date-fns";
+import profileImage from "../assets/profile.webp";
 export function About() {
-  const currentDate = formatDistanceToNow(new Date(2002, 3, 19))
-  const splitDate = currentDate.split(' ')
-  const age = splitDate[1]
+  const currentDate = formatDistanceToNow(new Date(2002, 3, 19));
+  const splitDate = currentDate.split(" ");
+  const age = splitDate[1];
 
   return (
-    <div className="flex flex-grow items-center justify-evenly md:px-24">
+    <div className="grid max-w-[900px] place-items-center gap-10 md:grid-cols-2">
       <div className="overflow-hidden rounded-md">
-        <img
-          className="h-72 object-cover md:h-[440px]"
-          src={profileImage}
-          alt=""
-        />
+        <img className="h-72 object-cover md:h-96" src={profileImage} alt="" />
       </div>
 
       <div
         id="about"
-        className="w-80 pt-4 font-manrope leading-relaxed text-neutral-300/80 md:w-[576px] md:text-lg"
+        className="w-80 font-manrope leading-relaxed text-neutral-300/80 md:w-[576px] md:text-lg"
       >
         <p>
           Olá, eu sou <strong>Lucas Gabriel</strong>, desenvolvedor de software
@@ -46,5 +41,5 @@ export function About() {
         </p>
       </div>
     </div>
-  )
+  );
 }

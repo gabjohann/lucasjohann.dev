@@ -5,9 +5,11 @@ import { Header } from './components/header'
 
 export function App() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <Outlet />
+      <main className="flex flex-grow items-center justify-center pt-[84px]">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   )

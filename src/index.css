@@ -30,7 +30,7 @@ ul {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: white blue;
+  scrollbar-color: #d8b4fe #18181b;
 }
 
 /* Chrome, Edge, and Safari */

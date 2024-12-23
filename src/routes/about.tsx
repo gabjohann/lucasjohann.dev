@@ -1,9 +1,9 @@
-import { formatDistanceToNow } from "date-fns";
-import profileImage from "../assets/profile.webp";
+import { formatDistanceToNow } from 'date-fns'
+import profileImage from '../assets/profile.webp'
 export function About() {
-  const currentDate = formatDistanceToNow(new Date(2002, 3, 19));
-  const splitDate = currentDate.split(" ");
-  const age = splitDate[1];
+  const currentDate = formatDistanceToNow(new Date(2002, 3, 19))
+  const splitDate = currentDate.split(' ')
+  const age = splitDate[1]
 
   return (
     <div className="grid max-w-[900px] place-items-center gap-10 md:grid-cols-2">
@@ -41,5 +41,5 @@ export function About() {
         </p>
       </div>
     </div>
-  );
+  )
 }

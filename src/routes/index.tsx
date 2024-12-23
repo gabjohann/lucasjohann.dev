@@ -7,6 +7,7 @@ import { Experience } from './experience'
 import { ErrorPage } from './errorPage'
 import { Technologies } from './technologies'
 import { Certificates } from './certificates'
+import { Projects } from './projects'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/certificates',
         element: <Certificates />,
+      },
+      {
+        path: '/projects',
+        element: <Projects />,
       },
     ],
   },

@@ -62,7 +62,11 @@ export function Header() {
             isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
           }`}
         >
-          {currentRoute.pathname !== '/' ? <NavLinks /> : <MinNavLinks />}
+          {currentRoute.pathname !== '/' ? (
+            <NavLinks handleLinkClick={() => setIsMenuOpen(false)} />
+          ) : (
+            <MinNavLinks handleLinkClick={() => setIsMenuOpen(false)} />
+          )}
         </ul>
       </div>
     </header>

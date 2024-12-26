@@ -1,7 +1,11 @@
 import { Link, useLocation } from 'react-router-dom'
 import { MenuItemProps, menuItems } from '../utils/navLinksTypes'
 
-export function NavLinks() {
+interface NavLinkProps {
+  handleLinkClick?: () => void
+}
+
+export function NavLinks({ handleLinkClick }: NavLinkProps) {
   const location = useLocation() // Obtém a localização atual
 
   return (
@@ -13,6 +17,7 @@ export function NavLinks() {
           <li key={index}>
             <Link
               to={link}
+              onClick={handleLinkClick}
               className={`relative text-white ${isActive ? 'font-semibold text-purple-300' : 'hover:text-purple-300'} transition-colors`}
             >
               {title}

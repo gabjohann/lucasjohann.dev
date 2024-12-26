@@ -31,7 +31,7 @@ export function Projects() {
     <div className="flex flex-col">
       <h1 className="pb-10 text-center text-3xl text-white">Projetos</h1>
 
-      <div className="grid grid-cols-2 gap-4 self-center px-8 md:grid-cols-3">
+      <div className="grid gap-4 self-center px-8 md:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}

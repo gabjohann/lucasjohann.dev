@@ -58,7 +58,7 @@ export function Header() {
 
         {/* Menu items */}
         <ul
-          className={`absolute right-0 top-0 z-20 flex w-3/6 flex-col items-start gap-2 rounded-bl-md border-b-2 border-l-2 border-white/15 bg-zinc-950/70 pb-3 pl-10 pt-16 duration-150 ${
+          className={`absolute right-0 top-0 z-20 flex h-screen w-screen flex-col items-start gap-2 rounded-bl-md border-b-2 border-l-2 border-white/15 bg-zinc-950/70 pb-3 pl-10 pt-16 duration-150 ${
             isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
           }`}
         >
